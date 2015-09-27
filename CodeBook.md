@@ -2,7 +2,7 @@ CodeBook for run_analysis function in creating tidydata.txt data file.
 
 Raw Data Source: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
-Required data files from ZIP archive that are used in the run_analysis function:
+Required data files & relative path from ZIP archive used in the run_analysis function:
 - data/features.txt
 - data/activity_labels.txt
 - data/train/subject_train.txt
