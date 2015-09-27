@@ -34,6 +34,6 @@ run_analysis <- function() {
      
      ## Create table containing the mean of all data columns grouped by Subject & Activity, and write file to data directory
      dataTidy <- aggregate(. ~Subject + Activity, dataComplete, mean)
-     write.table(dataTidy, file = "data/tidyData.txt", col.names = TRUE)
+     write.table(dataTidy, file = "data/tidyData.txt", col.names = FALSE)
      
 }
