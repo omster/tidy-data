@@ -21,6 +21,7 @@ Required data files & relative path from ZIP archive used in the run_analysis fu
 ###Methods
 
 Tables of similar data are combined by using the rbind() method yielding three tables: subject, activity, and features.  These tables are then combined using the cbind() method.  The resulting data is then aggregated by subject & activity using the mean values of the remaining variables/columns, and then saved to data/tidyData.txt
+
 Column names are assigned by factoring the features.txt data and using gsub() for renaming. 
 
 ###Manipulation
