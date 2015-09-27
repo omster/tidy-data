@@ -32,7 +32,7 @@ For each record in the dataset it is provided:
 - A 561-feature vector with time and frequency domain variables. 
 - Its activity label. 
 - An identifier of the subject who carried out the experiment.
-- 
+
 ###Methods
 
 Tables of similar data are combined by using the rbind() method yielding three tables: subject, activity, and features.  These tables are then combined using the cbind() method.  The resulting data is then aggregated by subject & activity using the mean values of the remaining variables/columns, and then saved to data/tidyData.txt
