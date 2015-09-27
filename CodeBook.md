@@ -4,6 +4,8 @@ CodeBook for run_analysis function in creating tidydata.txt data file.
 
 Data Source URL: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
+Data Description: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+
 Required data files & relative path from ZIP archive used in the run_analysis function:
 - data/features.txt
   - Contains column names for X_train.txt and X_test.txt data tables
@@ -16,7 +18,13 @@ Required data files & relative path from ZIP archive used in the run_analysis fu
 - data/train/X_train.txt, data/test/X_test.txt
   - Ordered text file list of bulk raw data variables
 
-###Intent
+###Manipulation
 
-The run_analysis function is meant to join & combine raw data from the train & test directories, and create a tidy data set consisting of the the mean values of any variables from the data that contains mean() or std() in the column name grouped by subject Id and type of activity.
+The merged output data from the Y_train and Y_test files are replaced with their descriptive label counterparts under the Activity column.  X_train & X_test column headers were added using the data from the features data, and have been updated to be more readable by replacing column names starting with 't*' or 'f*' with 'Time' or 'Freqency', respectively.
+
+##Methods
+
+Tables of similar data are combined by using the rbind() method yielding three tables: subject, activity, and features.  These tables are then combined using the cbind() method.  The resulting data is then aggregated by subject & activity using the mean values of the remaining variables/columns, and then saved asdata/tidyData.txt
+Column names are assigned by factoring the features.txt data and using gsub() for renaming. 
+
 
