@@ -18,5 +18,5 @@ Required data files & relative path from ZIP archive used in the run_analysis fu
 
 ###Intent
 
-The run_analysis function is meant to join & combine raw data from the train & test directories, and create a tidy data set consisting of the the mean values of any variables from the data that contains mean() or std() in the column name, grouped by subject Id and type of activity.
+The run_analysis function is meant to join & combine raw data from the train & test directories, and create a tidy data set consisting of the the mean values of any variables from the data that contains mean() or std() in the column name grouped by subject Id and type of activity.
 
