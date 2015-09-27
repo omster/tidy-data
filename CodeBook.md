@@ -22,7 +22,7 @@ Required data files & relative path from ZIP archive used in the run_analysis fu
 
 The merged output data from the Y_train and Y_test files are replaced with their descriptive label counterparts under the Activity column.  X_train & X_test column headers were added using the data from the features data, and have been updated to be more readable by replacing column names starting with 't*' or 'f*' with 'Time' or 'Freqency', respectively.
 
-##Methods
+###Methods
 
 Tables of similar data are combined by using the rbind() method yielding three tables: subject, activity, and features.  These tables are then combined using the cbind() method.  The resulting data is then aggregated by subject & activity using the mean values of the remaining variables/columns, and then saved asdata/tidyData.txt
 Column names are assigned by factoring the features.txt data and using gsub() for renaming. 
